@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    background-size: 200% 200%;
+	animation: gradient 10s ease infinite;
+}
+
+
+main{
+    max-width: 43rem;
+    padding: 6rem;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: 0px 2rem 5rem black;
+}
+
+
+.hide{
+    display: none;
+}
+
+
+/******Screen 1************/
+
+
+main .screen1 h1{
+    margin-bottom: 1.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: montserrat;
+    text-align: center;
+    color: #34355B;
+}
+
+
+main .screen1 p{
+    margin-bottom: 2rem;
+    font-family: dm sans;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #34355B;
+}
+
+
+main .screen1 button{
+    border: none;
+    background: none;
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+
+main .screen1 button:hover{
+    cursor: pointer;
+}
+
+
+/*********screen2**********/
+
+
+main .screen2{
+    position: relative;
+}
+
+
+main .screen2 h1 {
+    margin-bottom: 1.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: montserrat;
+    text-align: center;
+    color: #34355B;
+}
+
+
+main .screen2 #luck{
+    background-color: #dfdeca ;
+    box-shadow: .2rem .2rem .0rem rgba(0, 0, 0, 0.253);
+    animation: slide-in-fwd-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940)  ;
+}
+
+
+main .screen2 #luck h2{
+    margin: 2rem;
+    padding: 1rem;
+    font-family: dancing script;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+
+main .screen2 button{
+    width: 17rem;
+    padding: 1.6rem;
+    font-family: dm sans;
+    font-weight: 700;
+    border: none;
+    border-radius: .4rem;
+    color: white;
+    background-color: #FF9500;
+    position: absolute; left: 50%; top: 100%; transform: translate(-50%, -50%);
+}
+
+
+main .screen2 button:hover{
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.253);
+}
+
+
+main .screen2 img{
+    margin-bottom: 5rem;
+}
+
+
+/********@media*******/
+
+
+@media (max-width: 500px) {
+    main{
+        padding: 5rem 2rem;
+    }
+    
+    main #cookie{
+        width: 100%;
+    }
+
+    main img{
+        width: 100% ;
+    }
+    main .screen1, .screen2{
+        max-width: 250px;
+    }
+    main .screen1 h1{
+        font-size: 2.5rem;
+    }
+
+    main .screen2 #luck h2{
+        font-size: 2rem;
+    }
+
+    
+}
+
+
+/********@frames******/
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes slide-in-fwd-bottom {
+    0% {
+      transform: translateY(18rem) scale(0.2);
+
+    }
+    100% {
+      transform: translateZ(0) translateY(0);
+    }
+  }
+  
